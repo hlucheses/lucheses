@@ -1,2 +1,0 @@
-# lucheses
-Landing page pessoa
