@@ -17,18 +17,28 @@ export default function Hero() {
     >
       {/* Background image (replaceable via /public/hero-bg.jpg) */}
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center opacity-25"
-        style={{ backgroundImage: `url(${links.heroBg})` }}
+        className="absolute inset-0 z-0 bg-cover opacity-55"
+        style={{
+          backgroundImage: `url(${links.heroBg})`,
+          backgroundPosition: 'left center',
+          filter: 'grayscale(35%) contrast(108%) brightness(70%) saturate(85%)',
+        }}
         aria-hidden="true"
       />
 
-      {/* Layered gradients for depth */}
+      {/* Oxblood tint overlay — gives the image a warm editorial cast */}
       <div
-        className="absolute inset-0 z-10 bg-gradient-to-b from-ink via-ink/90 to-ink"
+        className="absolute inset-0 z-[1] bg-oxblood-deep/25 mix-blend-multiply"
+        aria-hidden="true"
+      />
+
+      {/* Layered gradients for depth — softer on the left where the landscape shows */}
+      <div
+        className="absolute inset-0 z-10 bg-gradient-to-b from-ink/85 via-ink/40 to-ink"
         aria-hidden="true"
       />
       <div
-        className="absolute inset-0 z-10 bg-gradient-to-r from-ink via-ink/70 to-transparent"
+        className="absolute inset-0 z-10 bg-gradient-to-r from-ink/70 via-ink/30 to-ink/95"
         aria-hidden="true"
       />
 
